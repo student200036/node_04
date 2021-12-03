@@ -23,7 +23,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/profile', (req, res) => {
-    res.send('ここはprofileのページやで')
+    res.render('profile/index.ejs')
 })
 
 module.exports = router;
