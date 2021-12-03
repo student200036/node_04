@@ -26,4 +26,9 @@ router.get('/profile', (req, res) => {
     res.render('profile/index.ejs')
 })
 
+router.get('item/:id', (req,res)=>{
+    const id = req.params.id
+    res.render('item/show.ejs')
+})
+
 module.exports = router;
