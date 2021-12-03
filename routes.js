@@ -18,8 +18,8 @@ router.post('/auth', (req, res) => {
     res.send(message)
 })
 
-router.get('/', (req, res) => {
-    res.render('index.ejs')
+router.get('/login', (req, res) => {
+    res.render('login/index.ejs')
 })
 
 router.get('/profile', (req, res) => {
