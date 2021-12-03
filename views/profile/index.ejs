@@ -8,13 +8,18 @@
 </head>
 <body>
     <h1><%= title %></h1>
+    <a href="/">トップページ</a>
     <dl>
         <dt>名前</dt>
         <dd><%= user.name %></dd>
         <dt>出身地</dt>
         <dd><%= user.birthplace %></dd>
         <dt>趣味</dt>
-        <dd><%= user.hobby %></dd>
+        <dd>
+            <% user.hobby.forEach((hobby) => {%>
+                <%= hobby %>
+            <% }) %>
+        </dd>
     </dl>
 </body>
 </html>

@@ -1,4 +1,5 @@
 const express = require('express');
+const item = require('./models/item')
 const router = express.Router();
 
 const default_login_name = process.env.LOGIN_NAME
@@ -44,6 +45,7 @@ router.get('/profile', (req, res) => {
 router.get('item/:id', (req,res)=>{
     const id = req.params.id
     console.log(id)
+    console.log(item)
     res.render('item/show.ejs')
 })
 
