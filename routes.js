@@ -18,16 +18,32 @@ router.post('/auth', (req, res) => {
     res.send(message)
 })
 
+router.get('/', (req,res) => {
+    let data = {}
+    data.title = 'トップページ'
+    res.render('index.ejs', data)
+})
+
 router.get('/login', (req, res) => {
     res.render('login/index.ejs')
 })
 
 router.get('/profile', (req, res) => {
-    res.render('profile/index.ejs')
+    let user = {
+        name: '悲身　非縁 (かなしみ　ぴえん)',
+        birthplace: '2018年当時のJK',
+        hobby: ['SNS','人狼','タピる']
+    }
+
+    let data = {}
+    data.title = 'プロフィール'
+    data.user = user
+    res.render('profile/index.ejs', data)
 })
 
 router.get('item/:id', (req,res)=>{
     const id = req.params.id
+    console.log(id)
     res.render('item/show.ejs')
 })
 
