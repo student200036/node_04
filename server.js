@@ -15,6 +15,8 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use(routes)
 
+app.set('view engine', 'ejs')
+
 app.listen(port, host, () => {
     console.log('http://' + host + ':' + port)
 })
