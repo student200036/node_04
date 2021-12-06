@@ -15,6 +15,10 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use(routes)
 
+const layouts = require('express-ejs-layouts')
+app.set('layout', 'layouts/default');
+app.use(layouts);
+
 app.set('view engine', 'ejs')
 
 app.listen(port, host, () => {
