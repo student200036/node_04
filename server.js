@@ -14,9 +14,8 @@ app.use(express.urlencoded({ extended: true }))
 
 const layouts = require('express-ejs-layouts')
 app.set('layout', 'layouts/default');
-app.use(layouts);
-
 app.set('view engine', 'ejs')
+app.use(layouts);
 
 app.use(routes)
 
