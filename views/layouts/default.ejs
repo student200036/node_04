@@ -8,6 +8,9 @@
 </head>
 <body>
     <%- include(../components/nav.ejs) %>
+    <% if (typeof title != 'undefined') { %>
+        <h1 class="h1"><%= title %></h1>
+    <% } %>
     <%- body %>
 </body>
 </html>
