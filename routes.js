@@ -11,6 +11,7 @@ router.get('/profile', homeController.profile)
 router.get('/login', loginController.index)
 router.post('/auth', loginController.auth)
 
+router.get(('/item', itemController.index))
 router.get('/item/:id', itemController.show)
 
 module.exports = router;
